@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      To-do List
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,23 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item>
+      <ion-label position="stacked">A task you need to complete</ion-label>
+      <ion-input [(ngModel)]="taskName" placeholder="Enter task Here"></ion-input>
+      <ion-button color="primary" (click) = "enterItem()">Add item to list!</ion-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-item>
   </div>
+
+  <div padding>
+    <ion-list>
+      <ion-item *ngFor="let todo of taskList; let i =index">
+        {{todo}}
+        <ion-button color="danger" clear (click)="deleteTask(i)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+
 </ion-content>

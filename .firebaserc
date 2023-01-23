@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "thirdtry-71787": {
+      "hosting": {
+        "app": [
+          "thirdtry-71787"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "thirdtry-71787"
+  }
+}
