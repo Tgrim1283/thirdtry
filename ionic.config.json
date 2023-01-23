@@ -1,0 +1,7 @@
+{
+  "name": "thirdtry",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
